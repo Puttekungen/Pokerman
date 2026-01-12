@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 20791f07e62ce8246b17a3daf3e47212
+  productGUID: 87a0c39fb33697848b7f559928a9cf53
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Pokerman Nuke
+  productName: Pokibowl
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -601,14 +601,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Pokerman Nuke
+  metroPackageName: Pokibowl
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Pokerman Nuke
+  metroApplicationDescription: Pokibowl
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -679,10 +679,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: e7f5d6f5-af6f-4a40-9711-2f8d6f2c46d7
+  cloudProjectId: 4a30dbcb-0eab-4260-9047-8ef8afd88c86
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Pokerman Nuke
+  projectName: Pokibowl
   organizationId: unity_60118c88ee10961f8801
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
