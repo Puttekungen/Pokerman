@@ -2,3 +2,5 @@ TODO:
 Använda pokedex id för att ge en pokemon koden som är specifik för den pokémonen
 
 kunna använda pokedex id för att bestämma vilka pokemons som kan hittas i vilken buske
+
+Ha layers i tilemap så träd kan vara framför och bakom spelaren
