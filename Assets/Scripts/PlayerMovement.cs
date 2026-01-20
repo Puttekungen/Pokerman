@@ -1,44 +1,54 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
-public class PlayerMovement : MonoBehaviour
+public class GridPlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    public float tileSize = 1f;
+    public float moveTime = 0.15f; // how fast one step is
 
-    private bool isMoving;
-    private Vector2 input;
+    private bool isMoving = false;
 
-    private void Update()
+    void Update()
     {
-        if (!isMoving)
+        if (isMoving) return;
+
+        Vector2 input = new Vector2(
+            Input.GetAxisRaw("Horizontal"),
+            Input.GetAxisRaw("Vertical")
+        );
+
+        // no diagonal movement
+        if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+            input.y = 0;
+        else
+            input.x = 0;
+
+        if (input != Vector2.zero)
         {
-            input.x = Input.GetAxis("Horizontal");
-            input.y = Input.GetAxis("Vertical");
+            Vector3 targetPos = transform.position + new Vector3(
+                input.x * tileSize,
+                input.y * tileSize,
+                0
+            );
 
-            if (input.x != 0) input.y = 0; // Prevent diagonal movement
-
-            if (input != Vector2.zero)
-            {
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-
-                StartCoroutine(Move(targetPos));
-            }
+            StartCoroutine(Move(targetPos));
         }
     }
 
-    IEnumerator Move (Vector3 targetPos)
+    IEnumerator Move(Vector3 target)
     {
         isMoving = true;
+        Vector3 start = transform.position;
+        float t = 0f;
 
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
+        while (t < 1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            t += Time.deltaTime / moveTime;
+            transform.position = Vector3.Lerp(start, target, t);
             yield return null;
         }
-        transform.position = targetPos;
 
+        transform.position = target;
         isMoving = false;
     }
 }
