@@ -7,10 +7,12 @@ public class GridPlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
-    public float tileSize = 1f;
-    public float moveTime = 0.1f; // how fast one step is
+    private float tileSize = 1f;
+    private float moveTime = 0.35f;
 
     private bool isMoving = false;
+
+    private Vector2 moveDir = Vector2.down; // default facing
 
 
     private enum MovementState {idleDown, idleUp, idleLeft, idleRight, walkDown, walkUp, walkLeft, walkRight}
@@ -29,7 +31,7 @@ public class GridPlayerMovement : MonoBehaviour
     {
         Vector3 SnapToPixel(Vector3 pos)
         {
-            float ppu = 16f; // MUST match your tile sprite PPU
+            float ppu = 16f;
             pos.x = Mathf.Round(pos.x * ppu) / ppu;
             pos.y = Mathf.Round(pos.y * ppu) / ppu;
             return pos;
@@ -49,6 +51,7 @@ public class GridPlayerMovement : MonoBehaviour
 
         if (input != Vector2.zero)
         {
+            moveDir = input;
             Vector3 targetPos = transform.position + new Vector3(
                 input.x * tileSize,
                 input.y * tileSize,
@@ -82,21 +85,24 @@ public class GridPlayerMovement : MonoBehaviour
     {
         state = MovementState.idleDown;
 
-        Vector2 input = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-        );
-        Debug.Log(input);
-        // gör så att if grejen kollar på det som är ovanför här
-        if (rb.linearVelocity.x < -0.1f) { sprite.flipX = true; state = MovementState.walkLeft; }
-        if (rb.linearVelocity.x > 0.1f) { sprite.flipX = false; state = MovementState.walkRight; }
 
-        //if (rb.linearVelocity.y > 0.1f) state = MovementState.jumping;
-        //if (rb.linearVelocity.y > 0.1f && jumps == 0) state = MovementState.doubleJumping;
+        if (isMoving)
+        {
+            if (moveDir.x == 1) state = MovementState.walkRight;
+            else if (moveDir.x == -1) state = MovementState.walkLeft;
+            else if (moveDir.y == 1) state = MovementState.walkUp;
+            else if (moveDir.y == -1) state = MovementState.walkDown;
+        }
+        else
+        {
+            if (moveDir.x == 1) state = MovementState.idleRight;
+            else if (moveDir.x == -1) state = MovementState.idleLeft;
+            else if (moveDir.y == 1) state = MovementState.idleUp;
+            else if (moveDir.y == -1) state = MovementState.idleDown;
+        }
 
-        //if (rb.linearVelocity.y < -0.1f) state = MovementState.falling;
-        
-
+        Debug.Log(state);
+        Debug.Log(isMoving);
         anim.SetInteger("State", (int)state);
 
     }
