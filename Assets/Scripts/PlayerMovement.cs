@@ -7,6 +7,8 @@ public class GridPlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    [SerializeField] private LayerMask blockedLayer;
+
     private float tileSize = 1f;
     private float moveTime = 0.35f;
 
@@ -24,6 +26,16 @@ public class GridPlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+    }
+
+    bool IsBlocked(Vector3 targetPos)
+    {
+        return Physics2D.OverlapBox(
+            targetPos,
+            Vector2.one * 0.2f, // ungefär 1 tile
+            0f,
+            blockedLayer
+        );
     }
 
 
@@ -52,14 +64,19 @@ public class GridPlayerMovement : MonoBehaviour
         if (input != Vector2.zero)
         {
             moveDir = input;
+
             Vector3 targetPos = transform.position + new Vector3(
                 input.x * tileSize,
                 input.y * tileSize,
                 0
             );
 
+            if (IsBlocked(targetPos))
+                return;
+
             StartCoroutine(Move(targetPos));
         }
+
 
         IEnumerator Move(Vector3 target)
         {
