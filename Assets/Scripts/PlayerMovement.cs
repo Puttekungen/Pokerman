@@ -17,7 +17,7 @@ public class GridPlayerMovement : MonoBehaviour
     private Vector2 moveDir = Vector2.down; // default facing
 
 
-    private enum MovementState {idleDown, idleUp, idleLeft, idleRight, walkDown, walkUp, walkLeft, walkRight}
+    private enum MovementState {idleDown, idleUp, idleLeft, idleRight, walkDown, walkUp, walkLeft, walkRight, runDown, runUp, runLeft, runRight, cycleDown, cycleUp, cycleLeft, cycleRight}
     private MovementState state = MovementState.idleDown;
 
 
