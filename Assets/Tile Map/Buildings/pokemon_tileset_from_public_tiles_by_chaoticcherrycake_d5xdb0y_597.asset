@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: pokemon_tileset_from_public_tiles_by_chaoticcherrycake_d5xdb0y_597
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -297117307, guid: 59975bc8886f5ee46875e1fbf4d5c8ea, type: 3}
+  m_Sprite: {fileID: -397227067, guid: 838f491b37d5b8147a74750d71565579, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
