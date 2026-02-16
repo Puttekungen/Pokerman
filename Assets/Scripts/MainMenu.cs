@@ -45,12 +45,12 @@ public class MainMenu : MonoBehaviour
 
     void UpdateCursor()
     {
-        cursor.position = new Vector3(
-            cursor.position.x,
-            options[currentIndex].position.y,
-            cursor.position.z
+        cursor.anchoredPosition = new Vector2(
+            cursor.anchoredPosition.x,
+            options[currentIndex].anchoredPosition.y + 5f
         );
     }
+
 
     void SelectOption()
     {
