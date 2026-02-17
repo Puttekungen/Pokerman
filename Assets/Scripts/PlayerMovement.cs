@@ -10,9 +10,13 @@ public class GridPlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask blockedLayer;
 
     private float tileSize = 1f;
-    private float moveTime = 0.35f;
+
+    // Separate timings for walk vs run
+    [SerializeField] private float walkMoveTime = 0.35f;
+    [SerializeField] private float runMoveTime = 0.18f;
 
     private bool isMoving = false;
+    private bool isRunning = false; // toggled with X
 
     private Vector2 moveDir = Vector2.down; // default facing
 
@@ -38,6 +42,13 @@ public class GridPlayerMovement : MonoBehaviour
         );
     }
 
+    void HandleRunToggle()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            isRunning = !isRunning;
+        }
+    }
 
     void Movement()
     {
@@ -48,7 +59,6 @@ public class GridPlayerMovement : MonoBehaviour
             pos.y = Mathf.Round(pos.y * ppu) / ppu;
             return pos;
         }
-
 
         Vector2 input = new Vector2(
             Input.GetAxisRaw("Horizontal"),
@@ -77,16 +87,18 @@ public class GridPlayerMovement : MonoBehaviour
             StartCoroutine(Move(targetPos));
         }
 
-
         IEnumerator Move(Vector3 target)
         {
             isMoving = true;
             Vector3 start = transform.position;
             float t = 0f;
 
+            // Choose speed based on run toggle
+            float currentMoveTime = isRunning ? runMoveTime : walkMoveTime;
+
             while (t < 1f)
             {
-                t += Time.deltaTime / moveTime;
+                t += Time.deltaTime / currentMoveTime;
                 Vector3 newPos = Vector3.Lerp(start, target, t);
                 transform.position = SnapToPixel(newPos);
                 yield return null;
@@ -102,13 +114,22 @@ public class GridPlayerMovement : MonoBehaviour
     {
         state = MovementState.idleDown;
 
-
         if (isMoving)
         {
-            if (moveDir.x == 1) state = MovementState.walkRight;
-            else if (moveDir.x == -1) state = MovementState.walkLeft;
-            else if (moveDir.y == 1) state = MovementState.walkUp;
-            else if (moveDir.y == -1) state = MovementState.walkDown;
+            if (isRunning)
+            {
+                if (moveDir.x == 1) state = MovementState.runRight;
+                else if (moveDir.x == -1) state = MovementState.runLeft;
+                else if (moveDir.y == 1) state = MovementState.runUp;
+                else if (moveDir.y == -1) state = MovementState.runDown;
+            }
+            else
+            {
+                if (moveDir.x == 1) state = MovementState.walkRight;
+                else if (moveDir.x == -1) state = MovementState.walkLeft;
+                else if (moveDir.y == 1) state = MovementState.walkUp;
+                else if (moveDir.y == -1) state = MovementState.walkDown;
+            }
         }
         else
         {
@@ -118,10 +139,7 @@ public class GridPlayerMovement : MonoBehaviour
             else if (moveDir.y == -1) state = MovementState.idleDown;
         }
 
-        Debug.Log(state);
-        Debug.Log(isMoving);
         anim.SetInteger("State", (int)state);
-
     }
 
     void audioPlayer()
@@ -151,11 +169,12 @@ public class GridPlayerMovement : MonoBehaviour
 
     void Update()
     {
+        HandleRunToggle();
+
         if (isMoving) return;
+
         Movement();
-
         UpdateAnimationState();
-
         audioPlayer();
     }
 }
