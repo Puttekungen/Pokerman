@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Sandshrew
+  m_EditorClassIdentifier: 
+  name: Sandshrew
+  description: 
+  frontSprite: {fileID: 7942963812657439901, guid: 7134b6a7447db704bbb308ae0742e2d4, type: 3}
+  backSprite: {fileID: 7942963812657439901, guid: 027d8a76f08f8024381ea5048724c268, type: 3}
+  type1: 9
+  type2: 0
+  maxHP: 50
+  attack: 75
+  defense: 85
+  spAttack: 20
+  spDefense: 30
+  speed: 40

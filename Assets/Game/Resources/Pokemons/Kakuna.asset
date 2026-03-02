@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Kakuna
+  m_EditorClassIdentifier: 
+  name: Kakuna
+  description: 
+  frontSprite: {fileID: -2843410814597151157, guid: c098b3f6fb7084b41bdba21f2715e142, type: 3}
+  backSprite: {fileID: -2843410814597151157, guid: 71e87ef7c15fbc24d9e098384adf74df, type: 3}
+  type1: 12
+  type2: 8
+  maxHP: 45
+  attack: 25
+  defense: 50
+  spAttack: 25
+  spDefense: 25
+  speed: 35

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Clefairy
+  m_EditorClassIdentifier: 
+  name: Clefairy
+  description: 
+  frontSprite: {fileID: 966981055544060943, guid: 8c184df71186a4f40ba4ef185e056160, type: 3}
+  backSprite: {fileID: 966981055544060943, guid: efd8a7cba99819845bf719dd91bcecd7, type: 3}
+  type1: 18
+  type2: 0
+  maxHP: 70
+  attack: 45
+  defense: 48
+  spAttack: 60
+  spDefense: 65
+  speed: 35
