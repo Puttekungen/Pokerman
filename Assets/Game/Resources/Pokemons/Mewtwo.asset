@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Mewtwo
+  m_EditorClassIdentifier: 
+  name: Mewtwo
+  description: 
+  frontSprite: {fileID: -4657137745714291183, guid: 2129d3e5bf5367c42bfa152cc26bcc48, type: 3}
+  backSprite: {fileID: -4657137745714291183, guid: 29807b356f161de4181c65d2cd7788a8, type: 3}
+  type1: 11
+  type2: 0
+  maxHP: 106
+  attack: 110
+  defense: 90
+  spAttack: 154
+  spDefense: 100
+  speed: 130

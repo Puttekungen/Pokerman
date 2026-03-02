@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class GridPlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GridPlayerMovement : MonoBehaviour
     private Animator anim;
 
     [SerializeField] private LayerMask blockedLayer;
+    [SerializeField] private LayerMask grassLayer;
 
     private float tileSize = 1f;
 
@@ -105,9 +107,25 @@ public class GridPlayerMovement : MonoBehaviour
             }
 
             transform.position = SnapToPixel(target);
+
             isMoving = false;
+
+            CheckForEncounters();
         }
 
+        
+
+    }
+
+    private void CheckForEncounters()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        {
+            if (Random.Range(1, 101) <= 10)
+            {
+                Debug.Log("Encounter!!!!!!!!!!!!!!!!");
+            }
+        }
     }
 
     void UpdateAnimationState()
