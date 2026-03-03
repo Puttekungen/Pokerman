@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Diglett
+  m_EditorClassIdentifier: 
+  name: Diglett
+  description: 
+  frontSprite: {fileID: -2719121252061387226, guid: 7bdc0be4bce60d84aa2ed06a177d839b, type: 3}
+  backSprite: {fileID: -2719121252061387226, guid: 70c5dcbadec57ce43aa82baa0828b296, type: 3}
+  type1: 9
+  type2: 0
+  maxHP: 10
+  attack: 55
+  defense: 25
+  spAttack: 35
+  spDefense: 45
+  speed: 95

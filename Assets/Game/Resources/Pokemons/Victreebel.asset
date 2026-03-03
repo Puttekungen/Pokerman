@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Victreebel
+  m_EditorClassIdentifier: 
+  name: Victreebel
+  description: 
+  frontSprite: {fileID: 5615393954802549004, guid: 887e3b0e871a88c4d99ff0f606e1410f, type: 3}
+  backSprite: {fileID: 5615393954802549004, guid: 30121f2324bec2341b03288c845b4609, type: 3}
+  type1: 5
+  type2: 8
+  maxHP: 80
+  attack: 105
+  defense: 65
+  spAttack: 100
+  spDefense: 70
+  speed: 70

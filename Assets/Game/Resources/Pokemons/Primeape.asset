@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Primeape
+  m_EditorClassIdentifier: 
+  name: Primeape
+  description: 
+  frontSprite: {fileID: 3844892754837431324, guid: d6e68cf9921dab64c85de429b179848e, type: 3}
+  backSprite: {fileID: 3844892754837431324, guid: d57559db67c7a624cbfd4c2330a7721e, type: 3}
+  type1: 7
+  type2: 0
+  maxHP: 65
+  attack: 105
+  defense: 60
+  spAttack: 60
+  spDefense: 70
+  speed: 95

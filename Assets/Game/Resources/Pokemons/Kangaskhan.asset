@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Kangaskhan
+  m_EditorClassIdentifier: 
+  name: Kangaskhan
+  description: 
+  frontSprite: {fileID: 9039317986696801593, guid: 0837ef04c73fefa42a9e2ba2e64debb9, type: 3}
+  backSprite: {fileID: 9039317986696801593, guid: 5fa372afdd768b94a87d6f338d869fc1, type: 3}
+  type1: 1
+  type2: 0
+  maxHP: 105
+  attack: 95
+  defense: 80
+  spAttack: 40
+  spDefense: 80
+  speed: 90

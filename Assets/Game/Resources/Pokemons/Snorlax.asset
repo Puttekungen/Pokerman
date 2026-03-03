@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Snorlax
+  m_EditorClassIdentifier: 
+  name: Snorlax
+  description: 
+  frontSprite: {fileID: 876519888210604053, guid: 1e9646ac7ea4edb4ca9ca1e6a0aa5cdd, type: 3}
+  backSprite: {fileID: 876519888210604053, guid: 0a20a56cbcaeff146ae0b5e838f54c95, type: 3}
+  type1: 1
+  type2: 0
+  maxHP: 160
+  attack: 110
+  defense: 65
+  spAttack: 65
+  spDefense: 110
+  speed: 30

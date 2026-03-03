@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Moltres
+  m_EditorClassIdentifier: 
+  name: Moltres
+  description: 
+  frontSprite: {fileID: -4322694380550176129, guid: ff9a2a46504123e469aa4c941dbc651d, type: 3}
+  backSprite: {fileID: -4322694380550176129, guid: 3afde3d5ce3ec244a8028121d6a9c2cc, type: 3}
+  type1: 2
+  type2: 10
+  maxHP: 90
+  attack: 100
+  defense: 90
+  spAttack: 125
+  spDefense: 85
+  speed: 90

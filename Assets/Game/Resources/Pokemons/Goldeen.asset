@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Goldeen
+  m_EditorClassIdentifier: 
+  name: Goldeen
+  description: 
+  frontSprite: {fileID: -1506410404584980155, guid: 2c30ae25feac2fb47b5e253946cd1677, type: 3}
+  backSprite: {fileID: -1506410404584980155, guid: 08fc1992497b9dc4293b3ae833112300, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 45
+  attack: 67
+  defense: 60
+  spAttack: 35
+  spDefense: 50
+  speed: 63

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Poliwhirl
+  m_EditorClassIdentifier: 
+  name: Poliwhirl
+  description: 
+  frontSprite: {fileID: 696196942199323668, guid: 45cc2c4f535bcbc458d5ee2c356e8cc9, type: 3}
+  backSprite: {fileID: 696196942199323668, guid: 32b1f2a54ad4a38488624f873c3c0fa6, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 65
+  attack: 65
+  defense: 65
+  spAttack: 50
+  spDefense: 50
+  speed: 90

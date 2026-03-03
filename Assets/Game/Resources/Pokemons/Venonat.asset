@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Venonat
+  m_EditorClassIdentifier: 
+  name: Venonat
+  description: 
+  frontSprite: {fileID: 3305204542909309134, guid: c08ba0f3aadf7f443877b98a6580a757, type: 3}
+  backSprite: {fileID: 3305204542909309134, guid: 3982043713f30e3439f7c4b0176b6907, type: 3}
+  type1: 12
+  type2: 8
+  maxHP: 60
+  attack: 55
+  defense: 50
+  spAttack: 40
+  spDefense: 55
+  speed: 45

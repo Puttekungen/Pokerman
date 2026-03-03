@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Chansey
+  m_EditorClassIdentifier: 
+  name: Chansey
+  description: 
+  frontSprite: {fileID: 6741543493715448932, guid: 9be180215ef153f47b0d87d4e9fec8f0, type: 3}
+  backSprite: {fileID: 6741543493715448932, guid: 7745837d4a5ba1a4792d5f6d70022f26, type: 3}
+  type1: 1
+  type2: 0
+  maxHP: 250
+  attack: 5
+  defense: 5
+  spAttack: 35
+  spDefense: 105
+  speed: 50

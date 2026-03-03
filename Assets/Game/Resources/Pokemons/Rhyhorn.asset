@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Rhyhorn
+  m_EditorClassIdentifier: 
+  name: Rhyhorn
+  description: 
+  frontSprite: {fileID: -7759727267254818699, guid: f395ab5c88b59c144a563d3a19cbf836, type: 3}
+  backSprite: {fileID: -7759727267254818699, guid: 02fda8cf55ba19f48b003a280d2527a2, type: 3}
+  type1: 9
+  type2: 13
+  maxHP: 80
+  attack: 85
+  defense: 95
+  spAttack: 30
+  spDefense: 30
+  speed: 25

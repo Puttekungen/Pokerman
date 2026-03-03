@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Weezing
+  m_EditorClassIdentifier: 
+  name: Weezing
+  description: 
+  frontSprite: {fileID: 7528726497462766322, guid: fe48702b05a0e0c4dbdfa597d7e876c2, type: 3}
+  backSprite: {fileID: 8148560179057566084, guid: 00401e9582d9f1d4d8215377d3916536, type: 3}
+  type1: 8
+  type2: 0
+  maxHP: 65
+  attack: 90
+  defense: 120
+  spAttack: 85
+  spDefense: 70
+  speed: 60

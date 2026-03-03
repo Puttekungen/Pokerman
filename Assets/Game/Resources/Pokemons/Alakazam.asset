@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Alakazam
+  m_EditorClassIdentifier: 
+  name: Alakazam
+  description: 
+  frontSprite: {fileID: -7637225346878380456, guid: ddc4df1a3544ee34f9355699c513c040, type: 3}
+  backSprite: {fileID: -7637225346878380456, guid: b9665bc0a1c8d5a48940a4c616ea2e8a, type: 3}
+  type1: 11
+  type2: 0
+  maxHP: 55
+  attack: 50
+  defense: 45
+  spAttack: 135
+  spDefense: 95
+  speed: 120

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Seaking
+  m_EditorClassIdentifier: 
+  name: Seaking
+  description: 
+  frontSprite: {fileID: 4820760777659264260, guid: c97b23f3410506f4dbe8568338919268, type: 3}
+  backSprite: {fileID: 4820760777659264260, guid: f790dd0b61bee2846a7906c6c8977906, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 80
+  attack: 92
+  defense: 65
+  spAttack: 65
+  spDefense: 80
+  speed: 68

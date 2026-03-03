@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Golduck
+  m_EditorClassIdentifier: 
+  name: Golduck
+  description: 
+  frontSprite: {fileID: -1180868202760410102, guid: e36e7d3cc497e4c4b99cac579e100623, type: 3}
+  backSprite: {fileID: -1180868202760410102, guid: 7f2687f05d69cc44da6952669b32ae66, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 80
+  attack: 82
+  defense: 78
+  spAttack: 95
+  spDefense: 80
+  speed: 85

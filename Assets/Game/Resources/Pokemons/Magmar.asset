@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Magmar
+  m_EditorClassIdentifier: 
+  name: Magmar
+  description: 
+  frontSprite: {fileID: -4948516544300017617, guid: 26137d207c6878548af65ec030230f73, type: 3}
+  backSprite: {fileID: -4948516544300017617, guid: afd8044450f8dc442be8cceafae9c782, type: 3}
+  type1: 2
+  type2: 0
+  maxHP: 65
+  attack: 95
+  defense: 57
+  spAttack: 100
+  spDefense: 85
+  speed: 93

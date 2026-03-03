@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2217f0e7cce556047b868902af5aece9, type: 3}
+  m_Name: Staryu
+  m_EditorClassIdentifier: 
+  name: Staryu
+  description: 
+  frontSprite: {fileID: 4589771833153155733, guid: 7dfe70280ad8bc845a2fff0f92e7da85, type: 3}
+  backSprite: {fileID: 4589771833153155733, guid: dea211c7fc6bcad46a767062503284f3, type: 3}
+  type1: 3
+  type2: 0
+  maxHP: 30
+  attack: 45
+  defense: 55
+  spAttack: 70
+  spDefense: 55
+  speed: 85
