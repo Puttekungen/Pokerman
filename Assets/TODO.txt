@@ -6,3 +6,5 @@ kunna använda pokedex id för att bestämma vilka pokemons som kan hittas i vilken
 Ha layers i tilemap så träd kan vara framför och bakom spelaren
 
 Gör att subaru stair music spelar varje gång man står på trappor
+
+Lägg till "return by death" som ett pokemove som tar bort all speldata OBS spela return by death ljudet när det händer
