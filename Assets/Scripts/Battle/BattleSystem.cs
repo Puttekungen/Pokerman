@@ -6,17 +6,20 @@ using UnityEngine.UI;
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
+    [SerializeField] BattleUnit enemyUnit;
     [SerializeField] BattleHud playerHud;
+    [SerializeField] BattleHud enemyHud;
 
     private void Start()
     {
         SetupBattle();
-        Debug.Log("SetupBattle körs");
     }
 
     public void SetupBattle()
     {
         playerUnit.Setup();
+        enemyUnit.Setup();
         playerHud.SetData(playerUnit.Pokemon);
+        enemyHud.SetData(enemyUnit.Pokemon);
     }
 }

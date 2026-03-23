@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Pokemon
 {
-    public PokemonBase Base{get; set;}
+    public PokemonBase Base{ get; set; }
     public int Level { get; set; }
 
     public int HP { get; set; }
