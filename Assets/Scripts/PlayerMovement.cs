@@ -121,7 +121,7 @@ public class GridPlayerMovement : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
         {
-            if (Random.Range(1, 101) <= 10)
+            if (Random.Range(1, 201) <= 10)
             {
                 Debug.Log("Encounter!!!!!!!!!!!!!!!!");
             }
