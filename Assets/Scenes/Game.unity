@@ -4000,7 +4000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a767ecc72586a1448ef271f1bfa7e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Base: {fileID: 11400000, guid: f4955d4a5b6356849af70841f6679d32, type: 2}
+  _base: {fileID: 0}
   Level: 5
   isPlayerUnit: 0
 --- !u!114 &645402389
@@ -5160,7 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a767ecc72586a1448ef271f1bfa7e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Base: {fileID: 11400000, guid: 026cbe77054f7804784a13eae214fe62, type: 2}
+  _base: {fileID: 0}
   Level: 7
   isPlayerUnit: 1
 --- !u!114 &1091255711

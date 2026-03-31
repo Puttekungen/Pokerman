@@ -5,26 +5,28 @@ using UnityEngine.UI;
 
 public class BattleUnit : MonoBehaviour
 {
-    [SerializeField] PokemonBase Base;
+    [SerializeField] PokemonBase _base;
     [SerializeField] int Level;
     [SerializeField] bool isPlayerUnit;
 
-
     public Pokemon Pokemon { get; set; }
 
+    Image image;
+    private void Awake()
+    {
+        image = GetComponent<Image>();
+    }
     public void Setup()
     {
-        Pokemon = new Pokemon(Base, Level);
+        Pokemon = new Pokemon(_base, Level);
         if (isPlayerUnit)
         {
-            GetComponent<Image>().sprite = Pokemon.Base.BackSprite;
-            Debug.Log("backsprite");
+            image.sprite = Pokemon.Base.BackSprite;
         }
         else
         {
-            GetComponent<Image>().sprite = Pokemon.Base.FrontSprite;
-            Debug.Log("froontsprite");
+            image.sprite = Pokemon.Base.FrontSprite;
         }
-
     }
+    public
 }
