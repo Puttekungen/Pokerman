@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using System;
 
-public class GridPlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
@@ -10,6 +11,8 @@ public class GridPlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask blockedLayer;
     [SerializeField] private LayerMask grassLayer;
+
+    public event Action OnEncountered;
 
     private float tileSize = 1f;
 
@@ -121,9 +124,10 @@ public class GridPlayerMovement : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
         {
-            if (Random.Range(1, 201) <= 10)
+            if (UnityEngine.Random.Range(1, 201) <= 10)
             {
-                Debug.Log("Encounter!!!!!!!!!!!!!!!!");
+                UpdateAnimationState();
+                OnEncountered();
             }
         }
     }
@@ -185,7 +189,7 @@ public class GridPlayerMovement : MonoBehaviour
         //}
     }
 
-    void Update()
+    public void HandleUpdate()
     {
         HandleRunToggle();
 
