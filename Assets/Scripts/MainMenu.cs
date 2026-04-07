@@ -64,7 +64,7 @@ public class MainMenu : MonoBehaviour
         else if (currentIndex == 1)
         {
             // EXIT
-            Application.Quit();
+            UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 }
