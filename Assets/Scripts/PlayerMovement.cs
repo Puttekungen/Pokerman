@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask blockedLayer;
     [SerializeField] private LayerMask grassLayer;
 
+    public LayerMask interactableLayer;
+
     public event Action OnEncountered;
 
     private float tileSize = 1f;
@@ -43,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             targetPos,
             Vector2.one * 0.2f, // ungefär 1 tile
             0f,
-            blockedLayer
+            blockedLayer | interactableLayer
         );
     }
 
@@ -118,6 +120,20 @@ public class PlayerMovement : MonoBehaviour
 
         
 
+    }
+
+    void Interact()
+    {
+        // Använd moveDir för att räkna ut vilken tile karaktären tittar på
+        var facingDir = new Vector3(moveDir.x, moveDir.y, 0f);
+        var interactPos = transform.position + facingDir;
+
+        // Kolla om det finns något objekt på interactableLayer vid denna position
+        var collider = Physics2D.OverlapCircle(interactPos, 0.3f, interactableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
+        }
     }
 
     private void CheckForEncounters()
@@ -198,5 +214,10 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         UpdateAnimationState();
         audioPlayer();
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Interact();
+        }
     }
 }

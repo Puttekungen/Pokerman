@@ -15,7 +15,7 @@ TagManager:
   - Ground
   - Blocked
   - LongGrass
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2540986955
+    locked: 0
+  - name: Player
+    uniqueID: 3467635931
     locked: 0
   m_RenderingLayers:
   - Default
