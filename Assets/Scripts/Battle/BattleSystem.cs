@@ -77,7 +77,7 @@ public class BattleSystem : MonoBehaviour
             enemyUnit.PlayFaintAnimation();
 
             yield return new WaitForSeconds(2f);
-            OnBattleOver.Invoke(true);
+            OnBattleOver?.Invoke(true);
         }
         else
         {
@@ -106,7 +106,7 @@ public class BattleSystem : MonoBehaviour
             playerUnit.PlayFaintAnimation();
 
             yield return new WaitForSeconds(2f);
-            OnBattleOver.Invoke(false);
+            OnBattleOver?.Invoke(false);
         }
         else
         {
@@ -151,8 +151,23 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 1)
             {
                 // Run
+                StartCoroutine(RunAway());
             }
         }
+    }
+
+    IEnumerator RunAway()
+    {
+        state = BattleState.Busy;
+
+        dialogBox.EnableActionSelector(false);
+        dialogBox.EnableMoveSelector(false);
+        dialogBox.EnableDialogText(true);
+
+        yield return dialogBox.TypeDialog("Got away safely!");
+        yield return new WaitForSeconds(0.5f);
+
+        OnBattleOver?.Invoke(false);
     }
 
     void HandleMoveSelection()

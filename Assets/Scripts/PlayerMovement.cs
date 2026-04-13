@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask interactableLayer;
 
     public event Action OnEncountered;
+    public event Action<Collider2D> OnEnterTrainersView;
 
     private float tileSize = 1f;
 
@@ -121,19 +122,6 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
 
             CheckForEncounters();
-            CheckTileMusic();
-        }
-    }
-
-    void CheckTileMusic()
-    {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, stairsLayer))
-        {
-            if (audioSource.clip != stairMusic)
-            {
-                audioSource.clip = stairMusic;
-                audioSource.Play();
-            }
         }
     }
 
@@ -171,9 +159,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckIfInTrainersView()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FovLayer) != null)
+        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FovLayer);
+        if (collider != null)
         {
-            Debug.Log("In trainer's view!");
+            OnEnterTrainersView?.Invoke(collider);
         }
     }
 
@@ -218,9 +207,16 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         UpdateAnimationState();
 
+        OnMoveOver();
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             Interact();
         }
+    }
+
+    public void TriggerEncounter()
+    {
+        OnEncountered?.Invoke();
     }
 }
