@@ -1,7 +1,8 @@
-using UnityEngine;
+using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
-using System;
+using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask blockedLayer;
     [SerializeField] private LayerMask grassLayer;
+    [SerializeField] private LayerMask stairsLayer;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip stairMusic;
 
     public LayerMask interactableLayer;
 
@@ -28,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDir = Vector2.down; // default facing
 
 
-    private enum MovementState {idleDown, idleUp, idleLeft, idleRight, walkDown, walkUp, walkLeft, walkRight, runDown, runUp, runLeft, runRight, cycleDown, cycleUp, cycleLeft, cycleRight}
+    private enum MovementState { idleDown, idleUp, idleLeft, idleRight, walkDown, walkUp, walkLeft, walkRight, runDown, runUp, runLeft, runRight, cycleDown, cycleUp, cycleLeft, cycleRight }
     private MovementState state = MovementState.idleDown;
 
 
@@ -116,10 +121,20 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
 
             CheckForEncounters();
+            CheckTileMusic();
         }
+    }
 
-        
-
+    void CheckTileMusic()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, stairsLayer))
+        {
+            if (audioSource.clip != stairMusic)
+            {
+                audioSource.clip = stairMusic;
+                audioSource.Play();
+            }
+        }
     }
 
     void Interact()
@@ -136,15 +151,29 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void OnMoveOver()
+    {
+        CheckForEncounters();
+        CheckIfInTrainersView();
+    }
+
     private void CheckForEncounters()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.GrassLayer) != null)
         {
-            if (UnityEngine.Random.Range(1, 201) <= 10)
+            if (UnityEngine.Random.Range(1, 150) <= 10)
             {
                 UpdateAnimationState();
                 OnEncountered();
             }
+        }
+    }
+
+    private void CheckIfInTrainersView()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FovLayer) != null)
+        {
+            Debug.Log("In trainer's view!");
         }
     }
 
@@ -180,31 +209,6 @@ public class PlayerMovement : MonoBehaviour
         anim.SetInteger("State", (int)state);
     }
 
-    void audioPlayer()
-    {
-        //if (state == MovementState.running && IsGrounded())
-        //{
-        //    if (!runningSound.isPlaying)
-        //        runningSound.Play();
-        //}
-        //else
-        //{
-        //    if (runningSound.isPlaying)
-        //        runningSound.Stop();
-        //}
-
-        //if (state == MovementState.falling)
-        //{
-        //    if (!fallingSound.isPlaying)
-        //        fallingSound.Play();
-        //}
-        //else
-        //{
-        //    if (fallingSound.isPlaying)
-        //        fallingSound.Stop();
-        //}
-    }
-
     public void HandleUpdate()
     {
         HandleRunToggle();
@@ -213,7 +217,6 @@ public class PlayerMovement : MonoBehaviour
 
         Movement();
         UpdateAnimationState();
-        audioPlayer();
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
