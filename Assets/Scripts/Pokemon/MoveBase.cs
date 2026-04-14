@@ -5,9 +5,9 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "Move", menuName = "Pokemon/Create new move")]
 public class MoveBase : ScriptableObject
 {
-    [SerializeField] string name;
 
     [TextArea]
+    [SerializeField] string name;
     [SerializeField] string description;
 
     [SerializeField] PokemonType type;

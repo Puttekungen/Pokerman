@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,9 +12,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask blockedLayer;
     [SerializeField] private LayerMask grassLayer;
     [SerializeField] private LayerMask stairsLayer;
-
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip stairMusic;
 
     public LayerMask interactableLayer;
 
